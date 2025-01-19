@@ -1,0 +1,125 @@
+/* styles.css */
+body {
+    font-family: 'Playwrite VN', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    /* Background Image from an online source */
+    background-image: url('https://img.freepik.com/free-vector/engraving-hand-drawn-floral-background_23-2149026396.jpg?semt=ais_incoming');
+    background-size: cover;  /* Make sure the image covers the entire screen */
+    background-position: center;  /* Center the image */
+    background-attachment: fixed;  /* Keep the background fixed when scrolling */
+}
+
+header {
+    /* Semi-transparent background */
+    color:#a6a6a6;
+    text-align: center;
+    padding: 20px;
+    border: none; /* Remove any borders */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header p {
+    font-size: 1.2rem;
+}
+
+main {
+    flex-grow: 1;
+    padding: 30px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    border: none; /* Remove any borders */
+}
+
+.content {
+    margin-bottom: 80px;
+}
+
+.heart-popup {
+    position: fixed;
+    bottom: 20px; /* Position the heart at the bottom-right */
+    right: 20px;
+    cursor: pointer;
+    font-size: 3rem;
+    z-index: 9999; /* Make sure it's above other elements */
+    animation: popupAnimation 1s ease-out forwards;
+}
+
+.heart-popup .heart {
+    font-size: 3rem;
+    color: #ff4d88;
+    transition: transform 0.3s;
+}
+
+/* Popup Animation */
+@keyframes popupAnimation {
+    0% {
+        bottom: -80px;
+    }
+    50% {
+        bottom: 40px;
+    }
+    100% {
+        bottom: 20px;
+    }
+}
+
+/* Modal Styles */
+.photo-modal {
+    display: none; /* Initially hidden */
+    position: fixed;
+    z-index: 10000; /* Ensure modal is above everything else */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent black background */
+    overflow: auto;
+    padding-top: 60px;
+}
+
+.photo-modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+.close {
+    position: absolute;
+    top: 30px;
+    right: 45px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+footer {
+    text-align: center;
+    
+    padding: 20px;
+    color: #a6a6a6;
+    border: none; /* Remove any borders */
+}
+
+
